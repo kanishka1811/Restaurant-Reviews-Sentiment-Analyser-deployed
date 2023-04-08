@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+
+       <div class="center">
+        <h1>Restaurant Reviews Analyser</h1>
+
+        <form method="post" action="/predict" >
+
+            <div class="details">
+                <p>Try out this amazing sentiment analyzer, to find out whether a customer review is positive or negative!  </p>
+                <p> The Naive Bayes Machine learning model is trained on over 1000 restaurant reviews to get the best accuracy.
+                 </p>
+            </div>
+
+            <div class="txt">
+          <!--  <label>Drop in your text here.</label>-->
+                <textarea name="text1" rows="10" cols="50" placeholder="Drop in your text here..."></textarea><br><br>
+                <span></span>
+            </div>
+
+            <input type="submit" value="Analyse" ><br><br>
+
+        </form>
+
+        <p class="pre">
+           <strong> {{prediction_text}} </strong>
+        </p>
+
+       </div>
+
+
+
+    <footer>
+        <p>Copyright &copy; 2022 <strong>Kanishka Katiyar</strong>. All rights reserved.</p>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
